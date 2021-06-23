@@ -306,7 +306,8 @@ export default Backbone.Model.extend({
    * @private
    */
   getSelectedAll() {
-    return this.get('selected').allComponents();
+    const selected = this.get('selected');
+    return selected ? selected.allComponents() : [];
   },
 
   /**
